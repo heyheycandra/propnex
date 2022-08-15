@@ -260,7 +260,7 @@ class _SerialDetailBodyState extends State<SerialDetailBody> {
                                       width: 8,
                                     ),
                                     Text(
-                                      reduceToTwoPrecision(model.voteAverage).toString() + "%",
+                                      reduceToTwoPrecision(double.parse((model.voteAverage ?? "").toString().decimal)).toString() + "%",
                                       style: TextStyle(
                                         fontSize: context.scaleFont(16),
                                         color: sampleAppBlack,

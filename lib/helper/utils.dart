@@ -219,6 +219,16 @@ extension NumberExtract on String? {
     }
   }
 
+  String get decimal {
+    String number = "0";
+    if (this == null || this!.isEmpty) {
+      return number;
+    } else {
+      number = this!.replaceAll(RegExp(r'[^0-9]\.'), '');
+      return number.isEmpty ? "0" : number;
+    }
+  }
+
   String get numberFilter {
     String number = "";
     if (this == null || this!.isEmpty) {
